@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Geist } from "next/font/google";
+import { lato } from "../themes/fonts";
 import { cn } from "@/src/lib/utils";
 import { ThemeProvider } from "next-themes";
 import { WhiteLabelProvider } from "../themes/WhiteLabelContext";
-
-const geist = Geist({ subsets: ['latin'], variable: '--font-sans' });
 
 export const metadata: Metadata = {
   title: "Mello FLow",
@@ -17,7 +15,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="pt-BR"
       suppressHydrationWarning
-      className={cn("h-full", "antialiased", "font-sans", geist.variable)}
+      className={cn("h-full", "antialiased", "font-sans", lato.variable)}
     >
       <body className="min-h-full flex flex-col">
         <ThemeProvider

@@ -4,9 +4,15 @@ import { useTheme } from 'next-themes';
 import { ThemeProvider } from '../src/themes/ThemeProvider';
 import { WhiteLabelProvider } from '../src/themes/WhiteLabelContext';
 import '../src/app/globals.css';
+import { lato } from '../src/themes/fonts';
 
 function SyncAppearance({ appearance }: { appearance: string }) {
   const { setTheme } = useTheme();
+  useEffect(() => {
+    document.documentElement.classList.add(lato.variable);
+    return () => document.documentElement.classList.remove(lato.variable);
+  }, []);
+
   const lastAppearance = useRef<string | undefined>(undefined);
 
   useEffect(() => {

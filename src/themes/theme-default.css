@@ -22,10 +22,10 @@
   --default-white: #ffffff;
 
   --default-font-display:
-    var(--font-barlow-condensed), "Barlow Condensed", sans-serif;
+    var(--font-lato), "Lato", sans-serif;
 
   --default-font-body:
-    var(--font-barlow), "Barlow", sans-serif;
+    var(--font-lato), "Lato", sans-serif;
 }
 
 /* ── Shadcn / Tailwind semantic tokens — Light mode ── */
